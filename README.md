@@ -1,7 +1,10 @@
 # Processing Time Prediction with TCN + Transformer
+
 This project aims to explore and implement a hybrid TCN and Transformer architecture to improve the accuracy of shipment processing time predictions. By combining the efficient processing and temporal dependency capturing capabilities of TCNs with the powerful self-attention mechanism of Transformers, this hybrid approach offers a robust solution for forecasting in manufacturing contexts.
 
-`preprocessed.txt` Contains the preprocessed data used for training the model. Each line represents a data point, showing various stages of the shipment process and associated attributes. The preprocessing included turning the timestamps to Unix format and extract date, time, and weekday components, aggregate package dimensions and counts per order, handling missing values, one-hot encode categorical data, remove outliers, and normalize features using Min-Max scaling & Z-score normalization.
+`preprocessed.txt` Contains the preprocessed data used for training the model. 
+
+Each line represents a data point, showing various stages of the shipment process and associated attributes. The preprocessing included turning the timestamps to Unix format and extract date, time, and weekday components, aggregate package dimensions and counts per order, handling missing values, one-hot encode categorical data, remove outliers, and normalize features using Min-Max scaling & Z-score normalization.
 
 `tcn_transformer.py` Main file that includes the TCN Transformer model. 
 
