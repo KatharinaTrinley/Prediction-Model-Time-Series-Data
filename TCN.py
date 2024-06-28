@@ -7,7 +7,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv1D, Dropout, Flatten, Dense
 from tensorflow.keras.optimizers import Adam
 import matplotlib.pyplot as plt
-
+ 
 data = pd.read_csv('/content/preprocessed.txt')
 
 def augment_data(data, num_augmentations=3):
