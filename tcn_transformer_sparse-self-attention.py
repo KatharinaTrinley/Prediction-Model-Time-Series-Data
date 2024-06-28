@@ -11,7 +11,7 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau, Callback
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow.keras.layers import MultiHeadAttention
-
+ 
 def augment_data(data, num_augmentations=3):
     augmented_data = data.copy()
     for _ in range(num_augmentations):
