@@ -18,4 +18,8 @@ With multi-head attention mechanism different parts of the input sequence are de
 Next, the extracted features are input to a Transformer Decoder, where the self-attention layers and feed-forward neural networks learn the relationships across the input sequences. 
 Finally, a dense layer produces the final forecasted shipment processing time.
 
-`lin_reg.py` Implements a linear regression model.
+`tcn_transformer_sparse-self-attention.py` New main file which includes the TCN Transformer model with the better performing Transformer with sparse self attention.
+
+`lin_reg.py` Implements a linear regression model. This is one of the baseline models.
+
+
