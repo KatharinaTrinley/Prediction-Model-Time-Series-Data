@@ -8,7 +8,7 @@ from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import ReduceLROnPlateau, Callback
 import matplotlib.pyplot as plt
-
+ 
 model = Sequential()
 model.add(LSTM(units=50, return_sequences=True, input_shape=(sequence_length, X_reshaped.shape[2])))
 model.add(Dropout(0.2))
