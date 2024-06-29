@@ -11,7 +11,7 @@ We implement a hybrid TCN-Transformer and a hybrid TCN-LSTM architecture to impr
 
 Each line represents a data point, showing various stages of the shipment process and associated attributes. The preprocessing included turning the timestamps to Unix format and extract date, time, and weekday components, aggregate package dimensions and counts per order, handling missing values, one-hot encode categorical data, remove outliers, and normalize features using Min-Max scaling & Z-score normalization.
 
-`tcn_transformer.py` Main file that includes the TCN Transformer model:
+`tcn_transformer.py` Main file I that includes the TCN-Transformer model:
 
 A TCN layer acts as the initial feature extractor, using dilated causal convolutions to deal with temporal dependencies. 
 Stacked TCN layers are used to process the data and extract hierarchical temporal features. 
@@ -21,6 +21,10 @@ Next, the extracted features are input to a Transformer Decoder, where the self-
 Finally, a dense layer produces the final forecasted shipment processing time.
 
 `tcn_transformer_sparse-self-attention.py` File which includes the TCN Transformer model with sparse self attention.
+
+`TCN + LSTM.py` Main file II that includes the TCN-LSTM model: 
+
+Instead of in the Transformer architecture, the extracted features from the TCN layer are input into a LSTM network.
 
 `TCN.py` Implements only a TCN. Baseline Model I
 
