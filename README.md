@@ -1,4 +1,4 @@
-# Processing Time Prediction with TCN + Transformer and TCN + LSTM
+# Processing Time Prediction with TCN + biLSTM, TCN + Transformer and TCN + LSTM
 
 We implement a hybrid TCN-Transformer and a hybrid TCN-LSTM architecture to improve the accuracy of shipment processing time predictions. By combining the efficient processing and temporal dependency capturing capabilities of TCNs with the self-attention mechanism of Transformers, or the sequential data handling strengths of LSTMs—specifically their ability to learn order dependencies in sequence prediction problems—this hybrid approach offers a robust solution for forecasting processing times in manufacturing contexts, among others:
 
