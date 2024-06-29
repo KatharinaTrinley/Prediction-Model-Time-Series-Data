@@ -12,6 +12,9 @@ We implement a hybrid TCN-biLSTM, TCN-LSTM and a TCN-Transformer architecture to
 ### Figure C: TCN-Transformer Architecture 
 ![Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/9e712f20-9827-4937-ba4e-633864136b50) 
 
+## Comparative Analysis Results
+<img width="600" alt="Bildschirmfoto 2024-06-30 um 01 08 13" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/16804ed5-d1dc-41af-9e3c-7d32d6e8b5bd">
+
 ## Files
 `preprocessed.txt` Contains the preprocessed data used for training the model:
 
