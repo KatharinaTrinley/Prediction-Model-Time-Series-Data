@@ -13,7 +13,7 @@ We implement a hybrid TCN-biLSTM, TCN-LSTM and a TCN-Transformer architecture to
 ![Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/9e712f20-9827-4937-ba4e-633864136b50) 
 
 ## Comparative Analysis Results
-### Performance metrics of different models grouped by categories
+Performance metrics of different models grouped by categories
 
 | **Model**                               | **Params** | **MAE** | **MSE** |
 |------------------------------------------|------------|---------|---------|
