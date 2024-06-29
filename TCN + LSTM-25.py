@@ -63,9 +63,9 @@ dropout2 = Dropout(0.3)(conv2)
 flatten = Flatten()(dropout2)
 
 # LSTM
-lstm1 = LSTM(units=25, return_sequences=True)(input_layer)
+lstm1 = LSTM(units=50, return_sequences=True)(input_layer)
 dropout_lstm1 = Dropout(0.2)(lstm1)
-lstm2 = LSTM(units=25)(dropout_lstm1)
+lstm2 = LSTM(units=50)(dropout_lstm1)
 dropout_lstm2 = Dropout(0.2)(lstm2)
 
 merged = Concatenate()([flatten, dropout_lstm2])
