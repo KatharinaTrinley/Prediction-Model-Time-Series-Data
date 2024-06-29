@@ -68,7 +68,8 @@ dropout2 = Dropout(0.3)(conv2)
 flatten = Flatten()(dropout2)
 
 # Bi-LSTM
-x = Bidirectional(LSTM(25, return_sequences=True))(inputs)
+x = Bidirectional(LSTM(25, return_sequences=True))(inputs) #25 units
+# x = Bidirectional(LSTM(25, return_sequences=True))(inputs) #50 units
 
 x = Flatten()(x)
 x = Dense(50, activation='relu')(x)
