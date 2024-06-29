@@ -1,6 +1,6 @@
 # Processing Time Prediction with TCN + Transformer
 
-This project aims to explore and implement a hybrid TCN and Transformer architecture to improve the accuracy of shipment processing time predictions. By combining the efficient processing and temporal dependency capturing capabilities of TCNs with the self-attention mechanism of Transformers, this hybrid approach offers a robust solution for forecasting in manufacturing contexts:
+We implement a hybrid TCN-Transformer and a hybrid TCN-LSTM architecture to improve the accuracy of shipment processing time predictions. By combining the efficient processing and temporal dependency capturing capabilities of TCNs with the self-attention mechanism of Transformers, or the sequential data handling strengths of LSTMs—specifically their ability to learn order dependencies in sequence prediction problems—this hybrid approach offers a robust solution for forecasting processing times in manufacturing contexts, among others:
 
 ![Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/9e712f20-9827-4937-ba4e-633864136b50)
 
