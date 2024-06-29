@@ -20,6 +20,10 @@ Finally, a dense layer produces the final forecasted shipment processing time.
 
 `tcn_transformer_sparse-self-attention.py` File which includes the TCN Transformer model with sparse self attention.
 
-`lin_reg.py` Implements a linear regression model. This is one of the baseline models.
+`TCN.py` Implements only a TCN. Baseline Model I
+
+`LSTM.py` Implements a LSTM. Baseline Model II.
+
+`lin_reg.py` Implements a linear regression model. Baseline Model III.
 
 
