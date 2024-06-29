@@ -13,7 +13,29 @@ We implement a hybrid TCN-biLSTM, TCN-LSTM and a TCN-Transformer architecture to
 ![Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/9e712f20-9827-4937-ba4e-633864136b50) 
 
 ## Comparative Analysis Results
-<img width="600" alt="Bildschirmfoto 2024-06-30 um 01 08 13" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/16804ed5-d1dc-41af-9e3c-7d32d6e8b5bd">
+### Performance metrics of different models grouped by categories
+
+| **Model**                               | **Params** | **MAE** | **MSE** |
+|------------------------------------------|------------|---------|---------|
+| **TCN + biLSTM**                         |            |         |         |
+| TCN + biLSTM (50 units)                  | 101701     | **0.031**| **0.003**|
+| TCN + biLSTM (25 units)                  | 45901      | 0.041   | 0.0042  |
+| **TCN + LSTM**                           |            |         |         |
+| TCN + LSTM (50 units)                    | 95193      | **0.055**| **0.006**|
+| TCN + LSTM (25 units)                    | 63443      | 0.092   | 0.016   |
+| **LSTM, biLSTM**                         |            |         |         |
+| Long Short-Term Memory (50 units)        | 66251      | **0.050**| **0.007**|
+| Long Short-Term Memory (25 units)        | 63443      | 0.097   | 0.022   |
+| biLSTM (50 units)                        | 101701     | **0.028**| **0.002**|
+| **TCN**                                  |            |         |         |
+| Temporal Convolutional Network           | 52645      | 0.180   | 0.060   |
+| **Transformer-related**                  |            |         |         |
+| TCN + Transformer                        | 86117      | **0.215**| **0.087**|
+| TCN + Transformer with Sparse Self-Attention | 81957 | 0.263   | 0.134   |
+| TCN + LSTM + Transformer                 | 225637     | 0.076   | 0.034   |
+| **Linear Regression**                    |            |         |         |
+| Linear Regression                        | 95193      | 0.530   | 0.754   |
+
 
 ## Files
 `preprocessed.txt` Contains the preprocessed data used for training the model:
