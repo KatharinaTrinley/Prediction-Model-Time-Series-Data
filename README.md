@@ -37,30 +37,44 @@ Performance metrics of different models grouped by categories
 | Linear Regression                        | 95193      | 0.530   | 0.754   |
 
 
+
 ## Files
-`preprocessed.txt` Contains the preprocessed data used for training the model:
 
-Each line represents a data point, showing various stages of the shipment process and associated attributes. The preprocessing included turning the timestamps to Unix format and extract date, time, and weekday components, aggregate package dimensions and counts per order, handling missing values, one-hot encode categorical data, remove outliers, and normalize features using Min-Max scaling & Z-score normalization.
+### `preprocessed.txt`
+Contains the preprocessed data used for training the model:
 
-`tcn_transformer.py` Main file I that includes the TCN-Transformer model:
+Each line represents a data point, showing various stages of the shipment process and associated attributes. The preprocessing included:
+- Turning the timestamps to Unix format and extracting date, time, and weekday components.
+- Aggregating package dimensions and counts per order.
+- Handling missing values.
+- One-hot encoding categorical data.
+- Removing outliers.
+- Normalizing features using Min-Max scaling & Z-score normalization.
 
-A TCN layer acts as the initial feature extractor, using dilated causal convolutions to deal with temporal dependencies. 
-Stacked TCN layers are used to process the data and extract hierarchical temporal features. 
-The Attention Mechanism enhances the model's ability to focus on relevant features for prediction by computing attention weights.
-With multi-head attention mechanism different parts of the input sequence are dealt with. 
-Next, the extracted features are input to a Transformer Decoder, where the self-attention layers and feed-forward neural networks learn the relationships across the input sequences. 
-Finally, a dense layer produces the final forecasted shipment processing time.
+### `tcn_transformer.py`
+Main file that includes the TCN-Transformer model:
 
-`tcn_transformer_sparse-self-attention.py` File which includes the TCN Transformer model with sparse self attention.
+- A TCN layer acts as the initial feature extractor, using dilated causal convolutions to deal with temporal dependencies.
+- Stacked TCN layers process the data and extract hierarchical temporal features.
+- An Attention Mechanism enhances the model's ability to focus on relevant features by computing attention weights.
+- Multi-head attention mechanisms handle different parts of the input sequence.
+- Extracted features are input to a Transformer Decoder, where self-attention layers and feed-forward neural networks learn relationships across input sequences.
+- Finally, a dense layer produces the final forecasted shipment processing time.
 
-`TCN + LSTM.py` Main file II that includes the TCN-LSTM model: 
+### `tcn_transformer_sparse-self-attention.py`
+File that includes the TCN-Transformer model with sparse self-attention.
 
-Instead of in the Transformer architecture, the extracted features from the TCN layer are input into a LSTM network.
+### `TCN + LSTM.py`
+Main file that includes the TCN-LSTM model:
 
-`TCN.py` Implements only a TCN. Baseline Model I
+- Instead of using the Transformer architecture, the extracted features from the TCN layer are input into an LSTM network.
 
-`LSTM.py` Implements a LSTM. Baseline Model II.
+### `TCN.py`
+Implements only a TCN. Baseline Model I.
 
-`lin_reg.py` Implements a linear regression model. Baseline Model III.
+### `LSTM.py`
+Implements an LSTM. Baseline Model II.
 
+### `lin_reg.py`
+Implements a linear regression model. Baseline Model III.
 
