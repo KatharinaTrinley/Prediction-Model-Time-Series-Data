@@ -2,11 +2,13 @@
 
 We implement a hybrid TCN-Transformer and a hybrid TCN-LSTM architecture to improve the accuracy of shipment processing time predictions. By combining the efficient processing and temporal dependency capturing capabilities of TCNs with the self-attention mechanism of Transformers, or the sequential data handling strengths of LSTMs—specifically their ability to learn order dependencies in sequence prediction problems—this hybrid approach offers a robust solution for forecasting processing times in manufacturing contexts, among others:
 
-![Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/9e712f20-9827-4937-ba4e-633864136b50) Figure A: TCN-Transformer Architecture
+### Figure A: TCN-Transformer Architecture
+![Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/9e712f20-9827-4937-ba4e-633864136b50) 
 
-![Kopie von Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/428675db-4883-46b4-881a-63de4c373253) Figure B: TCN-LSTM Architecture
+### Figure B: TCN-LSTM Architecture
+![Kopie von Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/428675db-4883-46b4-881a-63de4c373253) 
 
-
+## Files
 `preprocessed.txt` Contains the preprocessed data used for training the model:
 
 Each line represents a data point, showing various stages of the shipment process and associated attributes. The preprocessing included turning the timestamps to Unix format and extract date, time, and weekday components, aggregate package dimensions and counts per order, handling missing values, one-hot encode categorical data, remove outliers, and normalize features using Min-Max scaling & Z-score normalization.
