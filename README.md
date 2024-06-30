@@ -69,6 +69,9 @@ Main file that includes the TCN-LSTM model:
 
 - Instead of using the Transformer architecture, the extracted features from the TCN layer are input into an LSTM network.
 
+### `TCN + biLSTM.py`
+Main file that includes the TCN-biLSTM model.
+
 ### `TCN.py`
 Implements only a TCN. Baseline Model I.
 
