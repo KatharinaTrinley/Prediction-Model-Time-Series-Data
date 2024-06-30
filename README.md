@@ -75,9 +75,12 @@ Main file that includes the TCN-biLSTM model.
 ### `TCN.py`
 Implements only a TCN. Baseline Model I.
 
+### `biLSTM.py`
+Implements an biLSTM. Baseline Model II.
+
 ### `LSTM.py`
-Implements an LSTM. Baseline Model II.
+Implements an LSTM. Baseline Model III.
 
 ### `lin_reg.py`
-Implements a linear regression model. Baseline Model III.
+Implements a linear regression model. Baseline Model IV.
 
