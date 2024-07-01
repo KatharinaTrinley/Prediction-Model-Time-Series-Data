@@ -33,7 +33,7 @@ Performance metrics of different models grouped by categories
 | TCN + Transformer with Sparse Self-Attention | 81957 | 0.263   | 0.134   |
 | TCN + LSTM + Transformer                 | 225637     | 0.076   | 0.034   |
 | **Linear Regression**                    |            |         |         |
-| Linear Regression                        | 95193      | 0.530   | 0.754   |
+| Linear Regression                        | 4      | 0.530   | 0.754   |
 
 
 
