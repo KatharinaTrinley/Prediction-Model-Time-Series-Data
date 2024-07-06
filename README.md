@@ -3,13 +3,13 @@
 We implement a hybrid TCN-biLSTM, TCN-LSTM and a TCN-Transformer architecture to improve the accuracy of shipment processing time predictions. By combining the efficient processing and temporal dependency capturing capabilities of TCNs with the self-attention mechanism of Transformers, or the sequential data handling strengths of LSTMs—specifically their ability to learn order dependencies in sequence prediction problems—this hybrid approach offers a robust solution for forecasting processing times in manufacturing contexts, among others:
 
 ### Figure A: TCN-biLSTM Architecture
-<img width="953" alt="Bildschirmfoto 2024-07-03 um 16 09 08" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/30f6790e-ae3d-4320-a598-bfae5b008fb3">
+<img width="711" alt="Bildschirmfoto 2024-07-03 um 16 09 08" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/30f6790e-ae3d-4320-a598-bfae5b008fb3">
 
 ### Figure B: TCN-LSTM Architecture
 <img width="711" alt="Bildschirmfoto 2024-07-06 um 13 26 50" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/edf121fc-7683-4f13-b10d-6803810ffdc8">
 
 ### Figure C: TCN-Transformer Architecture 
-<img width="923" alt="Bildschirmfoto 2024-07-06 um 13 27 46" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/693cc130-3908-45cc-a5eb-7a4047771406">
+<img width="711" alt="Bildschirmfoto 2024-07-06 um 13 27 46" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/693cc130-3908-45cc-a5eb-7a4047771406">
 
 ## Comparative Analysis Results
 Performance metrics of different models grouped by categories
