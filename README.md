@@ -18,6 +18,7 @@ Performance metrics of different models grouped by categories
 |------------------------------------------|------------|---------|---------|
 | **TCN + biLSTM**                         |            |         |         |
 | TCN + biLSTM (50 units)                  | 101701     | **0.031**| **0.003**|
+| TCN + biLSTM (50 units, non augmented)   | 101701     | 0.0807| 0.0357|
 | TCN + biLSTM (25 units)                  | 45901      | 0.041   | 0.0042  |
 | **TCN + LSTM**                           |            |         |         |
 | TCN + LSTM (50 units)                    | 95193      | **0.055**| **0.006**|
