@@ -42,6 +42,33 @@ step_3_features = step_2_features + land + auftragannahme_ts + auftragannahme_ts
 step_4_features = step_3_features + bereitgestellt_ts
 step_5_features = step_4_features + TA_ts + dienstleister
 
+# Function for Augmentation
+def augment_data(data, num_augmentations=3):
+    augmented_data = data.copy()
+    for _ in range(num_augmentations):
+        temp_data = data.copy()
+        # Apply random noise
+        temp_data['PROCESSING'] += np.random.normal(0, 0.01, size=temp_data['PROCESSING'].shape)
+        augmented_data = pd.concat([augmented_data, temp_data], axis=0)
+    return augmented_data
+
+# Augment
+data_augmented = augment_data(data, num_augmentations=3)
+print("Augmented Dataset:")
+print(data_augmented.head())
+
+X = data_augmented[step_5_features]
+y = data_augmented['PROCESSING']
+
+# Replicate the data 4 times
+X = np.tile(X, (4, 1))
+y = np.tile(y, 4)
+
+print("Replicated Dataset (Features):")
+print(X[:5])  # Print first 5 rows of features
+print("Replicated Dataset (Target):")
+print(y[:5])  # Print first 5 target values
+
 scaler_X = StandardScaler()
 X_scaled = scaler_X.fit_transform(X)
 scaler_y = StandardScaler()
