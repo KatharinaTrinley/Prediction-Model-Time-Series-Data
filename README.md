@@ -6,10 +6,10 @@ We implement a hybrid TCN-biLSTM, TCN-LSTM and a TCN-Transformer architecture to
 <img width="953" alt="Bildschirmfoto 2024-07-03 um 16 09 08" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/30f6790e-ae3d-4320-a598-bfae5b008fb3">
 
 ### Figure B: TCN-LSTM Architecture
-![Kopie von Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/428675db-4883-46b4-881a-63de4c373253) 
+<img width="711" alt="Bildschirmfoto 2024-07-06 um 13 26 50" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/edf121fc-7683-4f13-b10d-6803810ffdc8">
 
 ### Figure C: TCN-Transformer Architecture 
-![Brainstorming](https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/9e712f20-9827-4937-ba4e-633864136b50) 
+<img width="923" alt="Bildschirmfoto 2024-07-06 um 13 27 46" src="https://github.com/KatharinaTrinley/Prediction-model-TCN-Transformer/assets/152901977/693cc130-3908-45cc-a5eb-7a4047771406">
 
 ## Comparative Analysis Results
 Performance metrics of different models grouped by categories
