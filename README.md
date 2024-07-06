@@ -26,6 +26,7 @@ Performance metrics of different models grouped by categories
 | Long Short-Term Memory (50 units)        | 66251      | **0.050**| **0.007**|
 | Long Short-Term Memory (25 units)        | 63443      | 0.097   | 0.022   |
 | biLSTM (50 units)                        | 101701     | **0.028**| **0.002**|
+| biLSTM (50 units, non augmented)         |      | 0.0772| 0.0407|
 | **TCN**                                  |            |         |         |
 | Temporal Convolutional Network           | 52645      | 0.180   | 0.060   |
 | **Transformer-related**                  |            |         |         |
