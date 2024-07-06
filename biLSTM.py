@@ -2,6 +2,37 @@ data = pd.read_csv('/content/preprocessed.txt')
 print("Original Dataset:")
 print(data.head())
 
+eingang_ts = ['date_EINGANGSDATUM_UHRZEIT', 'time_EINGANGSDATUM_UHRZEIT', 'weekday_EINGANGSDATUM_UHRZEIT']
+verpackt_ts = ['date_VERPACKT_DATUM_UHRZEIT', 'time_VERPACKT_DATUM_UHRZEIT',
+               'weekday_VERPACKT_DATUM_UHRZEIT', 'secs_VERPACKT_DATUM_UHRZEIT']
+auftragsnummer_ts = ['date_AUFTRAGANNAHME_DATUM_UHRZEIT', 'time_AUFTRAGANNAHME_DATUM_UHRZEIT',
+                     'weekday_AUFTRAGANNAHME_DATUM_UHRZEIT', 'secs_AUFTRAGANNAHME_DATUM_UHRZEIT']
+lieferschein_ts = ['date_LIEFERSCHEIN_DATUM_UHRZEIT', 'time_LIEFERSCHEIN_DATUM_UHRZEIT',
+                   'weekday_LIEFERSCHEIN_DATUM_UHRZEIT', 'secs_LIEFERSCHEIN_DATUM_UHRZEIT']
+auftragannahme_ts = ['date_AUFTRAGANNAHME_DATUM_UHRZEIT', 'time_AUFTRAGANNAHME_DATUM_UHRZEIT',
+                     'weekday_AUFTRAGANNAHME_DATUM_UHRZEIT', 'secs_AUFTRAGANNAHME_DATUM_UHRZEIT']
+bereitgestellt_ts = ['date_BEREITGESTELLT_DATUM_UHRZEIT', 'time_BEREITGESTELLT_DATUM_UHRZEIT',
+                     'weekday_BEREITGESTELLT_DATUM_UHRZEIT', 'secs_BEREITGESTELLT_DATUM_UHRZEIT']
+TA_ts = ['weekday_TA_DATUM_UHRZEIT', 'date_TA_DATUM_UHRZEIT', 'time_TA_DATUM_UHRZEIT', 'secs_TA_DATUM_UHRZEIT']
+
+# other data:
+package_data = ['LAENGE_IN_CM', 'BREITE_IN_CM', 'HOEHE_IN_CM', 'GEWICHT_IN_KG', 'count_PACKSTUECKART=BEH',
+                'count_PACKSTUECKART=CAR', 'count_PACKSTUECKART=GBP', 'count_PACKSTUECKART=PAL',
+                'count_PACKSTUECKART=PKI', 'count_PACKSTUECKART=UNKNOWN', 'PACKAGE_COUNT']
+auftragsnummer = ['category_AUFTRAGSNUMMER=DSGA', 'category_AUFTRAGSNUMMER=RBMANUSHIP', 'category_AUFTRAGSNUMMER=return']
+land = ['LAND=AT', 'LAND=AUT', 'LAND=BE', 'LAND=BR', 'LAND=CH', 'LAND=CN', 'LAND=CZ', 'LAND=DE', 'LAND=DK', 'LAND=DR',
+        'LAND=ES', 'LAND=FCA', 'LAND=FR', 'LAND=HU', 'LAND=IE', 'LAND=IN', 'LAND=IT', 'LAND=JP', 'LAND=KR', 'LAND=MX',
+        'LAND=NL', 'LAND=None', 'LAND=PL', 'LAND=RO', 'LAND=RU', 'LAND=TR', 'LAND=UK', 'LAND=US']
+sonderfahrt = ['SONDERFAHRT']
+dienstleister = ['DIENSTLEISTER=DHL', 'DIENSTLEISTER=None', 'DIENSTLEISTER=TNT', 'DIENSTLEISTER=UPS']
+
+step_1_features = eingang_ts + sonderfahrt
+step_2_features = step_1_features + verpackt_ts + auftragsnummer_ts + package_data + auftragsnummer
+step_3_features = step_2_features + land + auftragannahme_ts + auftragannahme_ts + lieferschein_ts
+step_4_features = step_3_features + bereitgestellt_ts
+step_5_features = step_4_features + TA_ts + dienstleister
+
+# Function for Augmentation
 def augment_data(data, num_augmentations=3):
     augmented_data = data.copy()
     for _ in range(num_augmentations):
@@ -11,12 +42,15 @@ def augment_data(data, num_augmentations=3):
         augmented_data = pd.concat([augmented_data, temp_data], axis=0)
     return augmented_data
 
+# Augment
 data_augmented = augment_data(data, num_augmentations=3)
 print("Augmented Dataset:")
 print(data_augmented.head())
 
 X = data_augmented[step_5_features]
 y = data_augmented['PROCESSING']
+
+# Replicate the data 4 times
 X = np.tile(X, (4, 1))
 y = np.tile(y, 4)
 
@@ -29,13 +63,10 @@ scaler_X = StandardScaler()
 X_scaled = scaler_X.fit_transform(X)
 scaler_y = StandardScaler()
 y_scaled = scaler_y.fit_transform(y.reshape(-1, 1))
-
-
 print("Normalized Dataset (Features):")
 print(X_scaled[:5])  # Print first 5 rows of normalized features
 print("Normalized Dataset (Target):")
 print(y_scaled[:5])  # Print first 5 normalized target values
-
 sequence_length = 10
 X_reshaped = []
 y_reshaped = []
