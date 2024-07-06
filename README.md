@@ -25,6 +25,7 @@ Performance metrics of different models grouped by categories
 | TCN + LSTM (25 units)                    | 63443      | 0.092   | 0.016   |
 | **LSTM, biLSTM**                         |            |         |         |
 | Long Short-Term Memory (50 units)        | 66251      | **0.050**| **0.007**|
+| Long Short-Term Memory (50 units, non aug)| 66251      | **0.050**| 0.0978|
 | Long Short-Term Memory (25 units)        | 63443      | 0.097   | 0.022   |
 | biLSTM (50 units)                        | 101701     | **0.028**| **0.002**|
 | biLSTM (50 units, non augmented)         |      | 0.0772| 0.0407|
