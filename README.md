@@ -1,4 +1,4 @@
-# Predicting Processing Time in Low-Resource Settings with Transformer Decoder-based Models
+# Predicting Processing Time in Low-Resource Settings with Transformer Decoder-based, LSTM-based and Regression Analysis Models
 
 # Transformer - FFNN
 ![Transformer Decoder (1)](https://github.com/user-attachments/assets/d8580782-95af-452c-90d3-544d2dd63166)
